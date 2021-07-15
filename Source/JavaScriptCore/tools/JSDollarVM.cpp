@@ -176,7 +176,7 @@ private:
 
 class ElementHandleOwner : public WeakHandleOwner {
 public:
-    bool isReachableFromOpaqueRoots(Handle<JSC::Unknown> handle, void*, SlotVisitor& visitor, const char** reason) override
+    bool isReachableFromOpaqueRoots(JSC::Handle<JSC::Unknown> handle, void*, SlotVisitor& visitor, const char** reason) override
     {
         if (UNLIKELY(reason))
             *reason = "JSC::Element is opaque root";
