@@ -697,7 +697,8 @@
 #define HAVE_TM_GMTOFF 1
 #define HAVE_TM_ZONE 1
 #define HAVE_TIMEGM 1
-#define HAVE_PTHREAD_MAIN_NP 1
+// Allows running off the main thread on macOS
+#define HAVE_PTHREAD_MAIN_NP 0
 
 #if CPU(X86_64) || CPU(ARM64)
 #define HAVE_INT128_T 1
